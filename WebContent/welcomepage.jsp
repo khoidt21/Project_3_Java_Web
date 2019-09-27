@@ -5,7 +5,10 @@
     <div class="container">
 
       <!-- About Section Heading -->
-      <h2 class="page-section-heading text-center text-uppercase text-white" style="margin-top: 40px">WELCOME PAGE</h2>
+      
+      <h2 class="page-section-heading text-center text-uppercase text-white" style="margin-top: 40px">
+         
+      </h2>
       
       <!-- About Section Content -->
       <div class="row">

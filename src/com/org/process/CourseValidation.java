@@ -50,7 +50,7 @@ public class CourseValidation extends HttpServlet {
 		//PrintWriter out = response.getWriter();
 		//out.println("Add accout sucess");
 		
-		dbMap.getAllAccount();
+		//dbMap.getAllAccount();
 		
 		javax.servlet.RequestDispatcher rd = request.getRequestDispatcher("result.jsp");
 		rd.forward(request, response);	

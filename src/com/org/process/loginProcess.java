@@ -47,27 +47,20 @@ public class loginProcess extends HttpServlet {
 		String password = request.getParameter("password");
 		
 		HttpSession session = request.getSession(true);
-		String error = "";
 		
 		DBMap dbMap = new DBMap();
 		
 		dbMap.addAccount("admin", "12345");
 		
-		//dbMap.getAllAccount();
+		//Integer visitCount = new Integer(0);
+		//String visitCountKey = new String("visitCount");
 		
-		
-		
-		/*dbMap.addAccount("tuan", "12345");
-		dbMap.addAccount("giap", "12345");
-		dbMap.addAccount("hoa", "12345");
-		*/
-		
-		error = dbMap.checkAccount(username, password);
-		if(error.equals("Sccuess")) {
+		if(dbMap.checkAccount(username, password)==true) {
 			session.setAttribute("username",username);
+			dbMap.addAcountLogin(username,password);
 			response.sendRedirect("index.jsp");
 		}
-		else if(error.equals("Error")) {
+		else if(dbMap.checkAccount(username, password)==false) {
 			session.invalidate();
 			String errLogin = "Sorry UserName or Password Error!";
 			request.setAttribute("error", errLogin);
