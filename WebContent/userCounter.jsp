@@ -1,3 +1,4 @@
+<%@page import="javax.websocket.Session"%>
 <%@page import="com.org.db.DBMap"%>
 <%@ include file="header.jsp"%>
 <!-- Contact Section -->
@@ -14,8 +15,7 @@
 				<p class="lead">All account login:</p>
 			</div>
 			<div class="col-lg-6 mr-auto">
-				<% DBMap dbmap = new DBMap();%>
-			    <%=dbmap.getAllAccountLogin() %> 
+				
 			</div>
 		</div>
 	</div>

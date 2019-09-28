@@ -1,3 +1,4 @@
+<%@page import="com.org.db.DBMap"%>
 <%@ include file="header.jsp" %>
 <!-- Contact Section -->
 	 <!-- About Section -->
@@ -7,7 +8,9 @@
       <!-- About Section Heading -->
       
       <h2 class="page-section-heading text-center text-uppercase text-white" style="margin-top: 40px">
-         
+       		<%
+        
+      		%>
       </h2>
       
       <!-- About Section Content -->

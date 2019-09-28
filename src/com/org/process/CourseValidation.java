@@ -46,12 +46,7 @@ public class CourseValidation extends HttpServlet {
 		
 		DBMap dbMap = new DBMap();
 		dbMap.addAccount(name, password);
-		
-		//PrintWriter out = response.getWriter();
-		//out.println("Add accout sucess");
-		
-		//dbMap.getAllAccount();
-		
+				
 		javax.servlet.RequestDispatcher rd = request.getRequestDispatcher("result.jsp");
 		rd.forward(request, response);	
 	}

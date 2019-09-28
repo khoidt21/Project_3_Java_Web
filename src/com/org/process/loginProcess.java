@@ -7,6 +7,7 @@ import java.util.HashMap;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -52,12 +53,11 @@ public class loginProcess extends HttpServlet {
 		
 		dbMap.addAccount("admin", "12345");
 		
-		//Integer visitCount = new Integer(0);
-		//String visitCountKey = new String("visitCount");
-		
 		if(dbMap.checkAccount(username, password)==true) {
 			session.setAttribute("username",username);
-			dbMap.addAcountLogin(username,password);
+			
+		
+			
 			response.sendRedirect("index.jsp");
 		}
 		else if(dbMap.checkAccount(username, password)==false) {

@@ -43,4 +43,13 @@ public class DBMap {
 			}
 			return html;
 		}
+		
+		public boolean checkAccountLogin(String username) {
+			for(String i:listAccountLogin.keySet()) {
+				if(listAccountLogin.get(i).equals(username)) {
+					return true; 
+				}
+			}
+			return false;
+		}
 }

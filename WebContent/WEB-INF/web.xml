@@ -30,4 +30,5 @@
     <servlet-name>CourseValidation</servlet-name>
     <url-pattern>/coursevalidation-servlet</url-pattern>
   </servlet-mapping>
+   <display-name>Servlet Examples</display-name>
 </web-app>
